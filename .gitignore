@@ -23,10 +23,10 @@ MemoryCaptures/
 *.svd
 *.pdb
 *.unityproj
-*.meta
 
 # 🔹 Arquivos de Configuração Locais (Dev-Specific)
 *.userprefs
+*.asset.meta
 *.dotSettings
 *.orig
 
@@ -37,11 +37,9 @@ MemoryCaptures/
 *.log
 *.stacktrace
 
-# 🔹 Arquivos do Git LFS (se estiver usando)
-!.gitattributes 
-
 # 🔹 Plugins e Dependências (Se forem baixados pelo Unity)
 Packages/*
+!Packages/manifest.json 
 
 # 🔹 Ignorar backups do Unity
 *.bak
