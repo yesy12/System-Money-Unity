@@ -1,0 +1,52 @@
+# 🔹 Pastas que o Unity recria automaticamente
+Library/
+Temp/
+Logs/
+obj/
+UserSettings/
+
+# 🔹 Builds e Cache
+Build/
+Builds/
+Cache/
+MemoryCaptures/
+
+# 🔹 Arquivos gerados pelo Visual Studio/Rider
+.vs/
+*.csproj
+*.sln
+*.user
+*.suo
+*.cache
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.unityproj
+*.meta
+
+# 🔹 Arquivos de Configuração Locais (Dev-Specific)
+*.userprefs
+*.dotSettings
+*.orig
+
+# 🔹 Arquivos do Unity Collaborate
+.collab/
+
+# 🔹 Arquivos de Logs e Debug
+*.log
+*.stacktrace
+
+# 🔹 Arquivos do Git LFS (se estiver usando)
+!.gitattributes 
+
+# 🔹 Plugins e Dependências (Se forem baixados pelo Unity)
+Packages/*
+
+# 🔹 Ignorar backups do Unity
+*.bak
+*.old
+
+# 🔹 Exceção para Assets e ProjectSettings (devem ser versionados)
+!Assets/
+!ProjectSettings/
