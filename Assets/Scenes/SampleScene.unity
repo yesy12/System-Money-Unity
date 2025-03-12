@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyTextValue: {fileID: 1407262835}
+  instanceSystem: {fileID: 1419780879}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyData: {fileID: 11400000, guid: 5a7b5ae31a2bb1342bace278f30cdf1d, type: 2}
+  i: 0
 --- !u!1 &1576007695
 GameObject:
   m_ObjectHideFlags: 0
