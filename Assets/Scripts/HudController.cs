@@ -6,26 +6,27 @@ public class HudController : MonoBehaviour{
 
     public TMP_Text MoneyTextValue;
 
+    public GameObject instanceSystem;
+    private SystemControllerValues systemControllerValues;
+
     private void Awake() {
-        
+        systemControllerValues = instanceSystem.GetComponent<SystemControllerValues>();
     }
 
-    private void OnEnable() {
-        SystemControllerValues.instance.OnMoneyChanged += UpdateMoney;
+    #region Events Action
+    void OnEnable() {
+        SystemControllerValues.instance.moneyData.OnMoneyChanged += UpdateMoney;     
     }
 
-    private void OnDisable() {
-        SystemControllerValues.instance.OnMoneyChanged -= UpdateMoney;
+    void OnDisable() {
+        SystemControllerValues.instance.moneyData.OnMoneyChanged -= UpdateMoney;
     }
+    #endregion
 
-
-    //void FixedUpdate(){
-    //    MoneyTextValue.text = SystemControllerValues.instance.moneyData.quantify.ToString();
-    //}
-
+    #region UpdateValuesText
     private void UpdateMoney(float amount) {
         MoneyTextValue.text = amount.ToString();
-        Debug.Log(amount.ToString());
     }
 
+    #endregion
 }

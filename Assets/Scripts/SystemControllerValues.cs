@@ -1,44 +1,30 @@
 using System;
 using UnityEngine;
+using static UnityEngine.InputSystem.InputSettings;
 
+[DefaultExecutionOrder(-100)]
 public class SystemControllerValues : MonoBehaviour{
 
     #region Instance
-
-    [NonSerialized] public static SystemControllerValues instance;
-    public event Action<float> OnMoneyChanged;
-
+    [SerializeField]public static SystemControllerValues instance;
     #endregion
 
     #region ScriptTableObjects
-
     [Header("ScriptableObjects")]
     public MoneySystem moneyData;
     #endregion
+
+    public int i = 0;
 
     private void Awake() {
         instance = this;
     }
 
-    #region Money
-    public void SetMoney(float amount) {
-        moneyData.quantify = amount;
-        OnMoneyChanged?.Invoke(amount);
-    }
 
-    public float GetMoney() {
-        return moneyData.quantify;
-    }
-    #endregion
-
-    public void EarnMoney() {
-        SetMoney(GetMoney() + 50);
-    }
-    int i = 0;
     private void FixedUpdate() {
         i++;
         if (i == 20) {
-            EarnMoney();
+            moneyData.addMoney(10);
             i = 0;
         }
     }
